@@ -64,6 +64,9 @@
     <!-- Heads up options -->
     <string name="less_boring_heads_up_title">Heads-Up Less Intrusive</string>
     <string name="less_boring_heads_up_summary">Show heads-up only for dialer or messaging app if they are not in foreground</string>
+    <!-- Brightness icon-->
+    <string name="brightness_icon_title">Brightness icon </string>
+    <string name="brightness_icon_summary">Show a brightness icon to the left of the brighness slider to adjust auto-brightness</string>
 	
     <!-- Statusbar -->
     <string name="double_tap_sleep_gesture_title">Double-tap to sleep</string>

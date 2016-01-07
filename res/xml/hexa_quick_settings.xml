@@ -43,6 +43,12 @@
         settings:min="1"
         settings:units="" />
 		
+     <com.hexa.settings.preferences.SystemSettingSwitchPreference
+            android:key="qs_show_brightness_icon"
+            android:title="@string/brightness_icon_title"
+            android:summary="@string/brightness_icon_summary"
+            android:defaultValue="false"/>
+		
     <com.hexa.settings.preferences.SystemSettingSwitchPreference
             android:key="qs_tile_title_visibility"
             android:title="@string/qs_tile_title_visibility_title"
