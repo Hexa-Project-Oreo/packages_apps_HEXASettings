@@ -21,6 +21,7 @@ import android.os.Bundle;
 import android.os.UserHandle;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
@@ -30,6 +31,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
+import com.android.settings.Utils;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
@@ -38,10 +40,34 @@ import java.util.List;
 
 public class HexaMiscSettings extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
 	
+    private static final String SMS_OUTGOING_CHECK_MAX_COUNT = "sms_outgoing_check_max_count";
+
+    private ListPreference mSmsCount;
+    private int mSmsCountValue;
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.hexa_misc_settings);
+		
+        PreferenceScreen prefScreen = getPreferenceScreen();
+        ContentResolver resolver = getActivity().getContentResolver();
+
+        mSmsCount = (ListPreference) findPreference(SMS_OUTGOING_CHECK_MAX_COUNT);
+        mSmsCountValue = Settings.Global.getInt(resolver,
+                Settings.Global.SMS_OUTGOING_CHECK_MAX_COUNT, 30);
+        mSmsCount.setValue(Integer.toString(mSmsCountValue));
+        mSmsCount.setSummary(mSmsCount.getEntry());
+        mSmsCount.setOnPreferenceChangeListener(this);
+        if (!Utils.isVoiceCapable(getActivity())) {
+            prefScreen.removePreference(mSmsCount);
+        }
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        // If we didn't handle it, let preferences handle it.
+        return super.onPreferenceTreeClick(preference);
     }
 	
     @Override
@@ -49,7 +75,18 @@ public class HexaMiscSettings extends SettingsPreferenceFragment implements Pref
         super.onResume();
     }
 	
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+
+        if (preference == mSmsCount) {
+            mSmsCountValue = Integer.valueOf((String) newValue);
+            int index = mSmsCount.findIndexOfValue((String) newValue);
+            mSmsCount.setSummary(
+                    mSmsCount.getEntries()[index]);
+            Settings.Global.putInt(resolver,
+                    Settings.Global.SMS_OUTGOING_CHECK_MAX_COUNT, mSmsCountValue);
+            return true;
+        }
         return false;
     }
 	
