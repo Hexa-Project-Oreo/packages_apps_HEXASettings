@@ -13,19 +13,11 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-	android:title="@string/hexa_title" >
-
-    <PreferenceCategory
-        android:key="hexa_nav_bar_cat"
-        android:title="@string/hexa_nav_bar">
-
-        <PreferenceScreen
-            android:key="hexa_nav_bar_settings_cat"
-            android:fragment="com.hexa.settings.HexaNavbarSettings"
-            android:title="@string/hexa_nav_bar_settings" />
-			
-    </PreferenceCategory>
-
-
+	xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" >
+	
+    <com.hexa.settings.preferences.SystemSettingSwitchPreference
+        android:key="double_tap_sleep_navbar"
+        android:title="@string/double_tap_sleep_navbar"
+        android:defaultValue="true" />
+	
 </PreferenceScreen>

@@ -14,6 +14,10 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 	
+	<!-- Hexa Categories -->
+	<string name="hexa_nav_bar">Navigation Bar</string>
+	<string name="hexa_nav_bar_settings">Navigation Customizations</string>
+	
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on color below to apply</string>
@@ -24,4 +28,6 @@
     <string name="set">Set</string>
     <string name="color_default">Default</string>
 	
+    <!-- NavBar -->
+    <string name="double_tap_sleep_navbar">Double tap to sleep on navbar</string>
 </resources>
