@@ -33,7 +33,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 import com.android.settings.Utils;
 
-import com.android.internal.logging.MetricsProto.MetricsEvent;
+import com.android.internal.logging.nano.MetricsProto;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +41,9 @@ import java.util.List;
 public class HexaMiscSettings extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
 	
     private static final String SMS_OUTGOING_CHECK_MAX_COUNT = "sms_outgoing_check_max_count";
+	
+    private PreferenceCategory mLedsCategory;
+    private PreferenceScreen mChargingLeds;
 
     private ListPreference mSmsCount;
     private int mSmsCountValue;
@@ -53,6 +56,7 @@ public class HexaMiscSettings extends SettingsPreferenceFragment implements Pref
         PreferenceScreen prefScreen = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
 
+		// SMS Count options
         mSmsCount = (ListPreference) findPreference(SMS_OUTGOING_CHECK_MAX_COUNT);
         mSmsCountValue = Settings.Global.getInt(resolver,
                 Settings.Global.SMS_OUTGOING_CHECK_MAX_COUNT, 30);
@@ -61,6 +65,18 @@ public class HexaMiscSettings extends SettingsPreferenceFragment implements Pref
         mSmsCount.setOnPreferenceChangeListener(this);
         if (!Utils.isVoiceCapable(getActivity())) {
             prefScreen.removePreference(mSmsCount);
+        }
+		
+		// Battery LED Settings
+        mLedsCategory = (PreferenceCategory) findPreference("hexa_bat_cat");
+        mChargingLeds = (PreferenceScreen) findPreference("hexa_bat_settings_cat");
+        if (mChargingLeds != null
+                && !getResources().getBoolean(
+                        com.android.internal.R.bool.config_intrusiveBatteryLed)) {
+            mLedsCategory.removePreference(mChargingLeds);
+        }
+        if (mChargingLeds == null) {
+            prefScreen.removePreference(mLedsCategory);
         }
     }
 
@@ -91,7 +107,7 @@ public class HexaMiscSettings extends SettingsPreferenceFragment implements Pref
     }
 	
     @Override
-    protected int getMetricsCategory() {
-        return MetricsEvent.KANGDROID;
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.KANGDROID;
     }
 }

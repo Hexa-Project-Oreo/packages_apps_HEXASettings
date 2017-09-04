@@ -23,6 +23,8 @@
 	<string name="hexa_status_bar_settings">StatusBar Customizations</string>
 	<string name="hexa_misc">Miscellaneous</string>
 	<string name="hexa_misc_settings">Miscellaneous Customizations</string>
+	<string name="hexa_bat">Battery Light</string>
+	<string name="hexa_bat_settings">Battery Light Customizations</string>
 	
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -54,5 +56,12 @@
     <string name="sms_outgoing_check_max_count_default">30 per minute (default)</string>
     <string name="sms_outgoing_check_max_count_hundred">100 per minute</string>
     <string name="sms_outgoing_check_max_count_sixhundred">600 per minute</string>
+    <!-- Battery light -->
+    <string name="battery_light_allow_on_dnd_title">Battery light in Do Not Disturb mode</string>
+    <string name="battery_light_low_blinking_title">Binking light on low battery</string>
+    <string name="battery_light_cat">Battery light color when charging</string>
+    <string name="battery_light_low_color">Low battery</string>
+    <string name="battery_light_medium_color">Medium battery</string>
+    <string name="battery_light_full_color">High battery</string>
 	
 </resources>
