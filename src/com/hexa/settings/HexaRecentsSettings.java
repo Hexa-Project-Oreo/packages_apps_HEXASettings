@@ -38,10 +38,23 @@ import java.util.List;
 
 public class HexaRecentsSettings extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
 	
+    private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
+    private ListPreference mRecentsClearAllLocation;
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.hexa_recents_settings);
+		
+        ContentResolver resolver = getActivity().getContentResolver();
+
+        // clear all recents
+        mRecentsClearAllLocation = (ListPreference) findPreference(RECENTS_CLEAR_ALL_LOCATION);
+        int location = Settings.System.getIntForUser(resolver,
+                Settings.System.RECENTS_CLEAR_ALL_LOCATION, 3, UserHandle.USER_CURRENT);
+        mRecentsClearAllLocation.setValue(String.valueOf(location));
+        mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntry());
+        mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
     }
 	
     @Override
@@ -50,6 +63,14 @@ public class HexaRecentsSettings extends SettingsPreferenceFragment implements P
     }
 	
     public boolean onPreferenceChange(Preference preference, Object objValue) {
+        if (preference == mRecentsClearAllLocation) {
+            int location = Integer.valueOf((String) objValue);
+            int index = mRecentsClearAllLocation.findIndexOfValue((String) objValue);
+            Settings.System.putIntForUser(getActivity().getContentResolver(),
+                    Settings.System.RECENTS_CLEAR_ALL_LOCATION, location, UserHandle.USER_CURRENT);
+            mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntries()[index]);
+        return true;
+        }
         return false;
     }
 	
