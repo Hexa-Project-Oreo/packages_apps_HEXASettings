@@ -49,6 +49,9 @@
 	
 	<!-- Quick Settings -->
 	<string name="status_bar_quick_qs_pulldown">Pulldown statusbar from right side to show QS panel</string>
+    <!-- QS footer warnings -->
+    <string name="qs_footer_warnings_title">QS footer warnings</string>
+    <string name="qs_footer_warnings_summary">Display a warning at bottom of QS panel when network is monitored by external apps or vpn</string>
 	
 	<!-- Miscellaneous -->
     <!-- Sms security limit -->
