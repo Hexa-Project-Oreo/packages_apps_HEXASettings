@@ -53,6 +53,10 @@
     <string name="qs_footer_warnings_title">QS footer warnings</string>
     <string name="qs_footer_warnings_summary">Display a warning at bottom of QS panel when network is monitored by external apps or vpn</string>
 	
+    <!-- Statusbar -->
+    <string name="double_tap_sleep_gesture_title">Double-tap to sleep</string>
+    <string name="double_tap_sleep_gesture_summary">Double tap on the statusbar to put the device to sleep</string>
+	
 	<!-- Miscellaneous -->
     <!-- Sms security limit -->
     <string name="apps_security_options_title">Apps security</string>
