@@ -42,6 +42,11 @@
         android:max="9"
         settings:min="1"
         settings:units="" />
+		
+    <com.hexa.settings.preferences.SystemSettingSwitchPreference
+            android:key="qs_tile_title_visibility"
+            android:title="@string/qs_tile_title_visibility_title"
+            android:defaultValue="true" />
 
     <com.hexa.settings.preferences.SystemSettingSwitchPreference
         android:key="less_boring_heads_up"
