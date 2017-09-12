@@ -119,6 +119,7 @@ public class HexaBatteryLightSettings extends SettingsPreferenceFragment impleme
             Settings.System.putIntForUser(getActivity().getContentResolver(),
                     Settings.System.BATTERY_LIGHT_LOW_BLINKING, value ? 1 : 0,
                     UserHandle.USER_CURRENT);
+			return true;
         }
         return false;
     }
