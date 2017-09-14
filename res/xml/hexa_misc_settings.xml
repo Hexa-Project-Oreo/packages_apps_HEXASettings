@@ -26,6 +26,11 @@
 			
     </PreferenceCategory>
 	
+       <Preference
+             android:key="wakelock_blocker"
+             android:fragment="com.hexa.settings.framgents.WakeLockBlocker"
+             android:title="@string/wakelock_blocker_title" />
+	
      <ListPreference
          android:key="sms_outgoing_check_max_count"
          android:title="@string/sms_outgoing_check_max_count_title"
