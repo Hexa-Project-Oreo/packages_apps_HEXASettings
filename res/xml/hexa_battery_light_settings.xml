@@ -42,6 +42,11 @@
             android:key="battery_light_full_color"
             android:title="@string/battery_light_full_color"
             android:defaultValue="0xFF00FF00" />
+			
+        <com.hexa.settings.preferences.colorpicker.ColorPickerPreference
+            android:key="battery_light_reallyfull_color"
+            android:title="@string/battery_light_reallyfull_color"
+            android:defaultValue="0xFF00FF00" />
     </PreferenceCategory>
 
 </PreferenceScreen>
