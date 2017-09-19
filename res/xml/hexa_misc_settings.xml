@@ -57,10 +57,16 @@
          android:summary="@string/toast_icon_summary"
          android:defaultValue="false" />
 		 
-       <com.six.settings.preferences.SystemSettingSwitchPreference
+       <com.hexa.settings.preferences.SystemSettingSwitchPreference
             android:key="mtp_dirty_hack"
             android:title="@string/enable_mtp_dirtyhack_title"
             android:summary="@string/enable_mtp_dirtyhack_summary"
+            android:defaultValue="false" />
+
+        <com.hexa.settings.preferences.SystemSettingSwitchPreference
+            android:key="show_cpu"
+            android:title="@string/show_cpu_title"
+            android:summary="@string/show_cpu_summary" 
             android:defaultValue="false" />
 
 </PreferenceScreen>
