@@ -48,6 +48,17 @@
             android:title="@string/hexa_lockscreen_settings" />
 			
     </PreferenceCategory>
+	
+    <PreferenceCategory
+        android:key="hexa_misc_cat"
+        android:title="@string/hexa_misc">
+
+        <PreferenceScreen
+            android:key="hexa_misc_settings_cat"
+            android:fragment="com.hexa.settings.HexaMiscSettings"
+            android:title="@string/hexa_misc_settings" />
+			
+    </PreferenceCategory>
 
 
 </PreferenceScreen>
