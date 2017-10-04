@@ -25,6 +25,8 @@
 	<string name="hexa_misc_settings">Miscellaneous Customizations</string>
 	<string name="hexa_bat">Battery Light</string>
 	<string name="hexa_bat_settings">Battery Light Customizations</string>
+	<string name="hexa_quick">QS Drawer</string>
+	<string name="hexa_quick_settings">QS Drawer Customizations</string>
 	
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -45,7 +47,7 @@
     <string name="media_art_title">Media cover art</string>
     <string name="media_art_summary">Enable media cover art on the lockscreen</string>
 	
-	<!-- StatusBar -->
+	<!-- Quick Settings -->
 	<string name="status_bar_quick_qs_pulldown">Pulldown statusbar from right side to show QS panel</string>
 	
 	<!-- Miscellaneous -->
