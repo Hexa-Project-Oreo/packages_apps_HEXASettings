@@ -50,6 +50,17 @@
     </PreferenceCategory>
 	
     <PreferenceCategory
+        android:key="hexa_recents_cat"
+        android:title="@string/hexa_recents">
+
+        <PreferenceScreen
+            android:key="hexa_recents_settings_cat"
+            android:fragment="com.hexa.settings.HexaRecentsSettings"
+            android:title="@string/hexa_recents_settings" />
+			
+    </PreferenceCategory>
+	
+    <PreferenceCategory
         android:key="hexa_lock_cat"
         android:title="@string/hexa_lockscreen">
 
