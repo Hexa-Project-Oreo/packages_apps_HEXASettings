@@ -18,7 +18,9 @@
 	<string name="hexa_nav_bar">Navigation Bar</string>
 	<string name="hexa_nav_bar_settings">Navigation Customizations</string>
 	<string name="hexa_lockscreen">LockScreen</string>
-	<string name="hexa_lockscreen_settings">LockScreen Customization</string>
+	<string name="hexa_lockscreen_settings">LockScreen Customizations</string>
+	<string name="hexa_status_bar">StatusBar</string>
+	<string name="hexa_status_bar_settings">StatusBar Customizations</string>
 	
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>

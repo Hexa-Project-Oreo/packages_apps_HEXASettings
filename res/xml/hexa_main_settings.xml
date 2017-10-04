@@ -15,6 +15,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 	android:title="@string/hexa_title" >
+	
+    <PreferenceCategory
+        android:key="hexa_status_cat"
+        android:title="@string/hexa_status_bar">
+
+        <PreferenceScreen
+            android:key="hex_status_bar_settings_cat"
+            android:fragment="com.hexa.settings.HexaStatusBarSettings"
+            android:title="@string/hexa_status_bar_settings" />
+			
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="hexa_nav_bar_cat"
