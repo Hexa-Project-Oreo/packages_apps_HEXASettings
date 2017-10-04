@@ -29,6 +29,8 @@
 	<string name="hexa_quick_settings">QS Drawer Customizations</string>
 	<string name="hexa_recents">Recents Screen</string>
 	<string name="hexa_recents_settings">Recents Customizations</string>
+	<string name="hexa_animation">Animation</string>
+	<string name="hexa_animation_settings">Animation Customizations</string>
 	
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
