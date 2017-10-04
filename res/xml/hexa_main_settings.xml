@@ -13,8 +13,7 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-	android:title="@string/hexa_title" >
+	xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" >
 	
     <PreferenceCategory
         android:key="hexa_status_cat"

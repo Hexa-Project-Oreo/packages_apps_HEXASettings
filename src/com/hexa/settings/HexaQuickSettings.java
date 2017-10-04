@@ -17,6 +17,7 @@
 package com.hexa.settings;
 
 import android.content.Context;
+import android.content.ContentResolver;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.support.v7.preference.ListPreference;
@@ -37,7 +38,7 @@ import com.android.internal.logging.nano.MetricsProto;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HexaStatusBarSettings extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
+public class HexaQuickSettings extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
 	
     private CustomSeekBarPreference mQsRowsPort;
     private CustomSeekBarPreference mQsRowsLand;

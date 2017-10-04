@@ -17,6 +17,7 @@
 package com.hexa.settings;
 
 import android.content.Context;
+import android.content.ContentResolver;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.os.UserHandle;
@@ -24,6 +25,7 @@ import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.support.v14.preference.SwitchPreference;
 import android.widget.Toast;
 import android.provider.Settings;
 import android.provider.SearchIndexableResource;
@@ -95,7 +97,6 @@ public class HexaAnimationSettings extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.hexa_animation_settings);
 		
 		final ContentResolver resolver = getContentResolver();
-		final Resources res = getResources();
 		
         mContext = getActivity().getApplicationContext();
 
