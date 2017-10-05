@@ -19,7 +19,7 @@
         android:key="hexa_bat_cat"
         android:title="@string/hexa_bat">
 
-        <PreferenceScreen
+        <Preference
             android:key="hexa_bat_settings_cat"
             android:fragment="com.hexa.settings.HexaBatteryLightSettings"
             android:title="@string/hexa_bat_settings" />
@@ -30,7 +30,7 @@
         android:key="hexa_animation_cat"
         android:title="@string/hexa_animation">
 
-        <PreferenceScreen
+        <Preference
             android:key="hexa_animation_settings_cat"
             android:fragment="com.hexa.settings.HexaAnimationSettings"
             android:title="@string/hexa_animation_settings" />

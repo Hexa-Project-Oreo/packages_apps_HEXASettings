@@ -19,7 +19,7 @@
         android:key="hexa_status_cat"
         android:title="@string/hexa_status_bar">
 
-        <PreferenceScreen
+        <Preference
             android:key="hex_status_bar_settings_cat"
             android:fragment="com.hexa.settings.HexaStatusBarSettings"
             android:title="@string/hexa_status_bar_settings" />
@@ -30,7 +30,7 @@
         android:key="hexa_quick_cat"
         android:title="@string/hexa_quick">
 
-        <PreferenceScreen
+        <Preference
             android:key="hexa_quick_settings_cat"
             android:fragment="com.hexa.settings.HexaQuickSettings"
             android:title="@string/hexa_quick_settings" />
@@ -41,7 +41,7 @@
         android:key="hexa_nav_bar_cat"
         android:title="@string/hexa_nav_bar">
 
-        <PreferenceScreen
+        <Preference
             android:key="hexa_nav_bar_settings_cat"
             android:fragment="com.hexa.settings.HexaNavbarSettings"
             android:title="@string/hexa_nav_bar_settings" />
@@ -52,7 +52,7 @@
         android:key="hexa_recents_cat"
         android:title="@string/hexa_recents">
 
-        <PreferenceScreen
+        <Preference
             android:key="hexa_recents_settings_cat"
             android:fragment="com.hexa.settings.HexaRecentsSettings"
             android:title="@string/hexa_recents_settings" />
@@ -63,7 +63,7 @@
         android:key="hexa_lock_cat"
         android:title="@string/hexa_lockscreen">
 
-        <PreferenceScreen
+        <Preference
             android:key="hexa_lock_settings_cat"
             android:fragment="com.hexa.settings.HexaLockscreenSettings"
             android:title="@string/hexa_lockscreen_settings" />
@@ -74,7 +74,7 @@
         android:key="hexa_misc_cat"
         android:title="@string/hexa_misc">
 
-        <PreferenceScreen
+        <Preference
             android:key="hexa_misc_settings_cat"
             android:fragment="com.hexa.settings.HexaMiscSettings"
             android:title="@string/hexa_misc_settings" />
