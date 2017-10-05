@@ -70,7 +70,7 @@ public class HexaMiscSettings extends SettingsPreferenceFragment implements Pref
 		
 		// Battery LED Settings
         mLedsCategory = (PreferenceCategory) findPreference("hexa_bat_cat");
-        mChargingLeds = (PreferenceScreen) findPreference("hexa_bat_settings_cat");
+        mChargingLeds = (Preference) findPreference("hexa_bat_settings_cat");
         if (mChargingLeds != null
                 && !getResources().getBoolean(
                         com.android.internal.R.bool.config_intrusiveBatteryLed)) {
