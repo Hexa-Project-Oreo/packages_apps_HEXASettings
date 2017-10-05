@@ -43,7 +43,7 @@
 
         <Preference
             android:key="hexa_nav_bar_settings_cat"
-            android:fragment="com.hexa.settings.HexaNavbarSettings"
+            android:fragment="com.hexa.settings.HexaNavBarSettings"
             android:title="@string/hexa_nav_bar_settings" />
 			
     </PreferenceCategory>
